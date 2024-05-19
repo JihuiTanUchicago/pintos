@@ -1,4 +1,4 @@
-```markdown
+
 # Data Structures
 
 ## Stack
