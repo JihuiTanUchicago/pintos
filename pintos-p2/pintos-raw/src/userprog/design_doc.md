@@ -1,9 +1,3 @@
-Contribution:
-
-Jihui Tan(tanjihui@uchicago.edu): 50%
-
-Haoran Wu(wuh@uchicago.edu): 50%
-
 ```markdown
 # Data Structures
 
