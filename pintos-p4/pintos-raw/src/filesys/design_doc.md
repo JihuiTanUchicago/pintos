@@ -1,9 +1,3 @@
-50% Mike Wu
-
-50% Todd Tan
-
-Expected Score: 93.8
-
 === Data Structures ===
 
 struct thread now has an additional attribute called "cwd". This is to support filesystem with subdirectories, so that each thread knows under what directory it is running. 
