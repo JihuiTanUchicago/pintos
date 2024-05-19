@@ -1,7 +1,3 @@
-# Team
-- Jihui("Todd") Tan
-- Haoran("Mike") Wu
-
 **All Test Passed**
 
 # Alarm Clock Implementation
