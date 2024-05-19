@@ -1,0 +1,50 @@
+@c Local settings
+
+@set coursenumber CMSC 23000
+@set localpintostarpath /usr/class/cs140/pintos/pintos.tar.gz
+@set localpintoshttppath http://@/www.stanford.edu/@/class/@/cs140/@/pintos/@/pintos.@/tar.gz
+@set localpintosbindir /usr/class/cs140/`uname -m`/bin
+
+@set recommendvnc
+@clear recommendcygwin
+
+@macro localmachines{}
+The CMSC 23000 ``officially supported'' Pintos development machines are
+the Linux machines in the @uref{http://maclab.cs.uchicago.edu/, ,
+Maclab}.
+@end macro
+
+@macro localpathsetup{}
+@end macro
+
+@macro localcrossbuild{}
+@end macro
+
+@macro localhonorcodepolicy{}
+Please respect the spirit
+and the letter of @uref{http://studentmanual.uchicago.edu/academic/index.shtml#honesty, ,
+UChicago's Academic Honesty policy} by refraining from reading any solutions available online or elsewhere.  Reading the source code for
+other operating system kernels, such as Linux or Minix, is allowed,
+but do not copy code from them literally.  Please cite the code that
+inspired your own in your design documentation.
+@end macro
+
+@macro localcredits{}
+@c none needed
+@end macro
+
+@macro localcvspolicy{}
+Instead, we recommend integrating your team's changes early and often,
+using your PhoenixForge SVN repository.
+This is less likely to produce surprises, because everyone can see
+everyone else's code as it is written, instead of just when it is
+finished.  These systems also make it possible to review changes and,
+when a change introduces a bug, drop back to working versions of code.
+@end macro
+
+@macro localcodingstandards{}
+@end macro
+
+@macro localdevelopmenttools{}
+@c Descriptions of additional, local development tools can be inserted here
+@end macro

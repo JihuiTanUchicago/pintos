@@ -1,0 +1,1543 @@
+--2023-10-04 19:44:05--  http://people.cs.uchicago.edu/~ruidanli/cs230/pintos-raw.tgz
+Resolving people.cs.uchicago.edu (people.cs.uchicago.edu)... 128.135.164.80
+Connecting to people.cs.uchicago.edu (people.cs.uchicago.edu)|128.135.164.80|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 258768 (253K) [application/x-gzip]
+Saving to: ‘/home/wuh/cs230-grading/pintos-raw.tgz’
+
+     0K .......... .......... .......... .......... .......... 19% 17.3M 0s
+    50K .......... .......... .......... .......... .......... 39% 30.0M 0s
+   100K .......... .......... .......... .......... .......... 59% 19.0M 0s
+   150K .......... .......... .......... .......... .......... 79% 20.3M 0s
+   200K .......... .......... .......... .......... .......... 98% 16.6M 0s
+   250K ..                                                    100% 5156G=0.01s
+
+2023-10-04 19:44:05 (20.0 MB/s) - ‘/home/wuh/cs230-grading/pintos-raw.tgz’ saved [258768/258768]
+
+pintos-raw/
+pintos-raw/src/
+pintos-raw/src/threads/
+pintos-raw/src/threads/io.h
+pintos-raw/src/threads/intr-stubs.h
+pintos-raw/src/threads/intr-stubs.S
+pintos-raw/src/threads/interrupt.h
+pintos-raw/src/threads/flags.h
+pintos-raw/src/threads/thread.h
+pintos-raw/src/threads/thread.c
+pintos-raw/src/threads/init.c
+pintos-raw/src/threads/interrupt.c
+pintos-raw/src/threads/pte.h
+pintos-raw/src/threads/palloc.c
+pintos-raw/src/threads/loader.h
+pintos-raw/src/threads/loader.S
+pintos-raw/src/threads/malloc.c
+pintos-raw/src/threads/synch.h
+pintos-raw/src/threads/Makefile
+pintos-raw/src/threads/switch.h
+pintos-raw/src/threads/palloc.h
+pintos-raw/src/threads/.gitignore
+pintos-raw/src/threads/vaddr.h
+pintos-raw/src/threads/init.h
+pintos-raw/src/threads/kernel.lds.S
+pintos-raw/src/threads/Make.vars
+pintos-raw/src/threads/switch.S
+pintos-raw/src/threads/malloc.h
+pintos-raw/src/threads/start.S
+pintos-raw/src/threads/synch.c
+pintos-raw/src/userprog/
+pintos-raw/src/userprog/process.c
+pintos-raw/src/userprog/tss.c
+pintos-raw/src/userprog/gdt.c
+pintos-raw/src/userprog/exception.c
+pintos-raw/src/userprog/exception.h
+pintos-raw/src/userprog/process.h
+pintos-raw/src/userprog/syscall.c
+pintos-raw/src/userprog/gdt.h
+pintos-raw/src/userprog/syscall.h
+pintos-raw/src/userprog/Makefile
+pintos-raw/src/userprog/.gitignore
+pintos-raw/src/userprog/Make.vars
+pintos-raw/src/userprog/pagedir.h
+pintos-raw/src/userprog/tss.h
+pintos-raw/src/userprog/pagedir.c
+pintos-raw/src/tests/
+pintos-raw/src/tests/lib.pm
+pintos-raw/src/tests/lib.h
+pintos-raw/src/tests/threads/
+pintos-raw/src/tests/threads/priority-donate-one.ck
+pintos-raw/src/tests/threads/mlfqs-fair.c
+pintos-raw/src/tests/threads/tests.h
+pintos-raw/src/tests/threads/mlfqs.pm
+pintos-raw/src/tests/threads/mlfqs-load-60.ck
+pintos-raw/src/tests/threads/priority-donate-lower.ck
+pintos-raw/src/tests/threads/priority-donate-sema.ck
+pintos-raw/src/tests/threads/alarm-simultaneous.ck
+pintos-raw/src/tests/threads/priority-condvar.ck
+pintos-raw/src/tests/threads/Rubric.alarm
+pintos-raw/src/tests/threads/Grading
+pintos-raw/src/tests/threads/priority-donate-chain.c
+pintos-raw/src/tests/threads/mlfqs-block.c
+pintos-raw/src/tests/threads/mlfqs-load-avg.c
+pintos-raw/src/tests/threads/priority-condvar.c
+pintos-raw/src/tests/threads/mlfqs-nice-2.ck
+pintos-raw/src/tests/threads/mlfqs-load-60.c
+pintos-raw/src/tests/threads/priority-fifo.c
+pintos-raw/src/tests/threads/alarm-negative.c
+pintos-raw/src/tests/threads/mlfqs-recent-1.ck
+pintos-raw/src/tests/threads/mlfqs-load-avg.ck
+pintos-raw/src/tests/threads/mlfqs-recent-1.c
+pintos-raw/src/tests/threads/Rubric.mlfqs
+pintos-raw/src/tests/threads/alarm-priority.ck
+pintos-raw/src/tests/threads/Rubric.priority
+pintos-raw/src/tests/threads/priority-donate-multiple.c
+pintos-raw/src/tests/threads/alarm-zero.c
+pintos-raw/src/tests/threads/priority-donate-sema.c
+pintos-raw/src/tests/threads/alarm-single.ck
+pintos-raw/src/tests/threads/mlfqs-nice-10.ck
+pintos-raw/src/tests/threads/mlfqs-fair-20.ck
+pintos-raw/src/tests/threads/priority-donate-multiple.ck
+pintos-raw/src/tests/threads/priority-donate-nest.ck
+pintos-raw/src/tests/threads/alarm.pm
+pintos-raw/src/tests/threads/priority-preempt.ck
+pintos-raw/src/tests/threads/Make.tests
+pintos-raw/src/tests/threads/priority-donate-one.c
+pintos-raw/src/tests/threads/alarm-negative.ck
+pintos-raw/src/tests/threads/priority-donate-lower.c
+pintos-raw/src/tests/threads/alarm-simultaneous.c
+pintos-raw/src/tests/threads/mlfqs-fair-2.ck
+pintos-raw/src/tests/threads/priority-sema.c
+pintos-raw/src/tests/threads/alarm-multiple.ck
+pintos-raw/src/tests/threads/alarm-wait.c
+pintos-raw/src/tests/threads/priority-fifo.ck
+pintos-raw/src/tests/threads/priority-sema.ck
+pintos-raw/src/tests/threads/mlfqs-block.ck
+pintos-raw/src/tests/threads/tests.c
+pintos-raw/src/tests/threads/mlfqs-load-1.ck
+pintos-raw/src/tests/threads/priority-change.ck
+pintos-raw/src/tests/threads/priority-donate-multiple2.c
+pintos-raw/src/tests/threads/alarm-zero.ck
+pintos-raw/src/tests/threads/priority-donate-nest.c
+pintos-raw/src/tests/threads/priority-preempt.c
+pintos-raw/src/tests/threads/priority-change.c
+pintos-raw/src/tests/threads/priority-donate-multiple2.ck
+pintos-raw/src/tests/threads/alarm-priority.c
+pintos-raw/src/tests/threads/mlfqs-load-1.c
+pintos-raw/src/tests/threads/priority-donate-chain.ck
+pintos-raw/src/tests/make-grade
+pintos-raw/src/tests/userprog/
+pintos-raw/src/tests/userprog/read-boundary.c
+pintos-raw/src/tests/userprog/no-vm/
+pintos-raw/src/tests/userprog/no-vm/multi-oom.c
+pintos-raw/src/tests/userprog/no-vm/multi-oom.ck
+pintos-raw/src/tests/userprog/no-vm/Rubric
+pintos-raw/src/tests/userprog/no-vm/Make.tests
+pintos-raw/src/tests/userprog/read-stdout.c
+pintos-raw/src/tests/userprog/write-boundary.c
+pintos-raw/src/tests/userprog/child-close.c
+pintos-raw/src/tests/userprog/sc-bad-sp.ck
+pintos-raw/src/tests/userprog/exit.ck
+pintos-raw/src/tests/userprog/exec-once.c
+pintos-raw/src/tests/userprog/close-normal.ck
+pintos-raw/src/tests/userprog/read-bad-ptr.c
+pintos-raw/src/tests/userprog/args-many.ck
+pintos-raw/src/tests/userprog/create-empty.c
+pintos-raw/src/tests/userprog/close-twice.c
+pintos-raw/src/tests/userprog/open-boundary.c
+pintos-raw/src/tests/userprog/exit.c
+pintos-raw/src/tests/userprog/bad-write2.c
+pintos-raw/src/tests/userprog/Grading
+pintos-raw/src/tests/userprog/open-normal.ck
+pintos-raw/src/tests/userprog/rox-child.c
+pintos-raw/src/tests/userprog/args-multiple.ck
+pintos-raw/src/tests/userprog/bad-jump.ck
+pintos-raw/src/tests/userprog/bad-read2.ck
+pintos-raw/src/tests/userprog/multi-child-fd.ck
+pintos-raw/src/tests/userprog/rox-simple.c
+pintos-raw/src/tests/userprog/exec-missing.ck
+pintos-raw/src/tests/userprog/write-bad-ptr.ck
+pintos-raw/src/tests/userprog/read-stdout.ck
+pintos-raw/src/tests/userprog/create-bound.c
+pintos-raw/src/tests/userprog/close-bad-fd.ck
+pintos-raw/src/tests/userprog/wait-twice.ck
+pintos-raw/src/tests/userprog/open-twice.c
+pintos-raw/src/tests/userprog/create-normal.ck
+pintos-raw/src/tests/userprog/sc-bad-arg.ck
+pintos-raw/src/tests/userprog/exec-arg.c
+pintos-raw/src/tests/userprog/close-bad-fd.c
+pintos-raw/src/tests/userprog/read-bad-fd.ck
+pintos-raw/src/tests/userprog/wait-simple.c
+pintos-raw/src/tests/userprog/halt.ck
+pintos-raw/src/tests/userprog/exec-multiple.c
+pintos-raw/src/tests/userprog/create-null.c
+pintos-raw/src/tests/userprog/open-empty.c
+pintos-raw/src/tests/userprog/rox-child.inc
+pintos-raw/src/tests/userprog/open-null.ck
+pintos-raw/src/tests/userprog/create-long.c
+pintos-raw/src/tests/userprog/bad-read2.c
+pintos-raw/src/tests/userprog/wait-bad-pid.ck
+pintos-raw/src/tests/userprog/sc-boundary.c
+pintos-raw/src/tests/userprog/bad-write.ck
+pintos-raw/src/tests/userprog/create-empty.ck
+pintos-raw/src/tests/userprog/null.ck
+pintos-raw/src/tests/userprog/close-stdout.c
+pintos-raw/src/tests/userprog/multi-recurse.c
+pintos-raw/src/tests/userprog/sc-bad-arg.c
+pintos-raw/src/tests/userprog/sc-boundary.ck
+pintos-raw/src/tests/userprog/exec-multiple.ck
+pintos-raw/src/tests/userprog/bad-write2.ck
+pintos-raw/src/tests/userprog/open-twice.ck
+pintos-raw/src/tests/userprog/open-null.c
+pintos-raw/src/tests/userprog/close-stdout.ck
+pintos-raw/src/tests/userprog/sc-bad-sp.c
+pintos-raw/src/tests/userprog/open-missing.c
+pintos-raw/src/tests/userprog/sc-boundary-2.c
+pintos-raw/src/tests/userprog/write-bad-ptr.c
+pintos-raw/src/tests/userprog/create-normal.c
+pintos-raw/src/tests/userprog/child-bad.c
+pintos-raw/src/tests/userprog/create-exists.c
+pintos-raw/src/tests/userprog/args.c
+pintos-raw/src/tests/userprog/read-zero.c
+pintos-raw/src/tests/userprog/bad-jump2.ck
+pintos-raw/src/tests/userprog/write-normal.ck
+pintos-raw/src/tests/userprog/Rubric.functionality
+pintos-raw/src/tests/userprog/write-boundary.ck
+pintos-raw/src/tests/userprog/bad-jump.c
+pintos-raw/src/tests/userprog/exec-bad-ptr.ck
+pintos-raw/src/tests/userprog/exec-once.ck
+pintos-raw/src/tests/userprog/open-empty.ck
+pintos-raw/src/tests/userprog/boundary.c
+pintos-raw/src/tests/userprog/create-bound.ck
+pintos-raw/src/tests/userprog/read-normal.c
+pintos-raw/src/tests/userprog/write-zero.c
+pintos-raw/src/tests/userprog/boundary.h
+pintos-raw/src/tests/userprog/rox-child.ck
+pintos-raw/src/tests/userprog/sample.txt
+pintos-raw/src/tests/userprog/read-boundary.ck
+pintos-raw/src/tests/userprog/write-bad-fd.c
+pintos-raw/src/tests/userprog/create-bad-ptr.c
+pintos-raw/src/tests/userprog/wait-simple.ck
+pintos-raw/src/tests/userprog/Make.tests
+pintos-raw/src/tests/userprog/create-exists.ck
+pintos-raw/src/tests/userprog/close-stdin.ck
+pintos-raw/src/tests/userprog/read-normal.ck
+pintos-raw/src/tests/userprog/open-boundary.ck
+pintos-raw/src/tests/userprog/sc-boundary-2.ck
+pintos-raw/src/tests/userprog/bad-jump2.c
+pintos-raw/src/tests/userprog/rox-simple.ck
+pintos-raw/src/tests/userprog/wait-bad-pid.c
+pintos-raw/src/tests/userprog/multi-child-fd.c
+pintos-raw/src/tests/userprog/child-rox.c
+pintos-raw/src/tests/userprog/read-zero.ck
+pintos-raw/src/tests/userprog/write-stdin.c
+pintos-raw/src/tests/userprog/args-none.ck
+pintos-raw/src/tests/userprog/bad-read.ck
+pintos-raw/src/tests/userprog/open-missing.ck
+pintos-raw/src/tests/userprog/create-null.ck
+pintos-raw/src/tests/userprog/lib/
+pintos-raw/src/tests/userprog/lib/user/
+pintos-raw/src/tests/userprog/lib/user/.dummy
+pintos-raw/src/tests/userprog/lib/user/.gitignore
+pintos-raw/src/tests/userprog/lib/.gitignore
+pintos-raw/src/tests/userprog/read-bad-ptr.ck
+pintos-raw/src/tests/userprog/exec-arg.ck
+pintos-raw/src/tests/userprog/args-single.ck
+pintos-raw/src/tests/userprog/wait-twice.c
+pintos-raw/src/tests/userprog/open-normal.c
+pintos-raw/src/tests/userprog/halt.c
+pintos-raw/src/tests/userprog/write-stdin.ck
+pintos-raw/src/tests/userprog/multi-recurse.ck
+pintos-raw/src/tests/userprog/exec-missing.c
+pintos-raw/src/tests/userprog/bad-read.c
+pintos-raw/src/tests/userprog/bad-write.c
+pintos-raw/src/tests/userprog/write-zero.ck
+pintos-raw/src/tests/userprog/sample.inc
+pintos-raw/src/tests/userprog/wait-killed.ck
+pintos-raw/src/tests/userprog/write-bad-fd.ck
+pintos-raw/src/tests/userprog/args-dbl-space.ck
+pintos-raw/src/tests/userprog/Rubric.robustness
+pintos-raw/src/tests/userprog/rox-multichild.c
+pintos-raw/src/tests/userprog/create-bad-ptr.ck
+pintos-raw/src/tests/userprog/create-long.ck
+pintos-raw/src/tests/userprog/write-normal.c
+pintos-raw/src/tests/userprog/open-bad-ptr.ck
+pintos-raw/src/tests/userprog/wait-killed.c
+pintos-raw/src/tests/userprog/exec-bad-ptr.c
+pintos-raw/src/tests/userprog/close-normal.c
+pintos-raw/src/tests/userprog/open-bad-ptr.c
+pintos-raw/src/tests/userprog/close-twice.ck
+pintos-raw/src/tests/userprog/rox-multichild.ck
+pintos-raw/src/tests/userprog/close-stdin.c
+pintos-raw/src/tests/userprog/child-simple.c
+pintos-raw/src/tests/userprog/read-bad-fd.c
+pintos-raw/src/tests/Algorithm/
+pintos-raw/src/tests/Algorithm/Diff.pm
+pintos-raw/src/tests/main.c
+pintos-raw/src/tests/random.pm
+pintos-raw/src/tests/cksum.c
+pintos-raw/src/tests/arc4.pm
+pintos-raw/src/tests/tests.pm
+pintos-raw/src/tests/main.h
+pintos-raw/src/tests/vm/
+pintos-raw/src/tests/vm/page-merge-seq.ck
+pintos-raw/src/tests/vm/page-merge-seq.c
+pintos-raw/src/tests/vm/mmap-over-stk.c
+pintos-raw/src/tests/vm/mmap-inherit.c
+pintos-raw/src/tests/vm/mmap-exit.ck
+pintos-raw/src/tests/vm/pt-bad-read.ck
+pintos-raw/src/tests/vm/child-qsort.c
+pintos-raw/src/tests/vm/pt-bad-read.c
+pintos-raw/src/tests/vm/mmap-null.ck
+pintos-raw/src/tests/vm/mmap-over-code.ck
+pintos-raw/src/tests/vm/mmap-unmap.ck
+pintos-raw/src/tests/vm/mmap-twice.ck
+pintos-raw/src/tests/vm/page-merge-stk.c
+pintos-raw/src/tests/vm/page-parallel.c
+pintos-raw/src/tests/vm/pt-grow-stack.ck
+pintos-raw/src/tests/vm/mmap-read.ck
+pintos-raw/src/tests/vm/pt-grow-stk-sc.c
+pintos-raw/src/tests/vm/child-linear.c
+pintos-raw/src/tests/vm/page-merge-par.c
+pintos-raw/src/tests/vm/pt-big-stk-obj.c
+pintos-raw/src/tests/vm/Grading
+pintos-raw/src/tests/vm/mmap-write.ck
+pintos-raw/src/tests/vm/mmap-clean.ck
+pintos-raw/src/tests/vm/process_death.pm
+pintos-raw/src/tests/vm/mmap-write.c
+pintos-raw/src/tests/vm/mmap-misalign.ck
+pintos-raw/src/tests/vm/parallel-merge.h
+pintos-raw/src/tests/vm/mmap-unmap.c
+pintos-raw/src/tests/vm/child-qsort-mm.c
+pintos-raw/src/tests/vm/pt-grow-pusha.ck
+pintos-raw/src/tests/vm/child-sort.c
+pintos-raw/src/tests/vm/page-linear.ck
+pintos-raw/src/tests/vm/mmap-shuffle.ck
+pintos-raw/src/tests/vm/page-merge-stk.ck
+pintos-raw/src/tests/vm/mmap-inherit.ck
+pintos-raw/src/tests/vm/mmap-over-code.c
+pintos-raw/src/tests/vm/page-merge-par.ck
+pintos-raw/src/tests/vm/pt-grow-pusha.c
+pintos-raw/src/tests/vm/child-mm-wrt.c
+pintos-raw/src/tests/vm/mmap-twice.c
+pintos-raw/src/tests/vm/mmap-remove.c
+pintos-raw/src/tests/vm/child-inherit.c
+pintos-raw/src/tests/vm/mmap-exit.c
+pintos-raw/src/tests/vm/Rubric.functionality
+pintos-raw/src/tests/vm/mmap-read.c
+pintos-raw/src/tests/vm/mmap-shuffle.c
+pintos-raw/src/tests/vm/mmap-over-stk.ck
+pintos-raw/src/tests/vm/mmap-overlap.c
+pintos-raw/src/tests/vm/pt-grow-stack.c
+pintos-raw/src/tests/vm/mmap-over-data.c
+pintos-raw/src/tests/vm/page-merge-mm.ck
+pintos-raw/src/tests/vm/page-linear.c
+pintos-raw/src/tests/vm/mmap-bad-fd.ck
+pintos-raw/src/tests/vm/pt-write-code.ck
+pintos-raw/src/tests/vm/sample.txt
+pintos-raw/src/tests/vm/Make.tests
+pintos-raw/src/tests/vm/pt-grow-bad.ck
+pintos-raw/src/tests/vm/qsort.h
+pintos-raw/src/tests/vm/mmap-null.c
+pintos-raw/src/tests/vm/mmap-clean.c
+pintos-raw/src/tests/vm/page-shuffle.c
+pintos-raw/src/tests/vm/mmap-bad-fd.c
+pintos-raw/src/tests/vm/pt-write-code-2.c
+pintos-raw/src/tests/vm/mmap-close.c
+pintos-raw/src/tests/vm/pt-write-code.c
+pintos-raw/src/tests/vm/mmap-close.ck
+pintos-raw/src/tests/vm/mmap-misalign.c
+pintos-raw/src/tests/vm/pt-grow-stk-sc.ck
+pintos-raw/src/tests/vm/mmap-overlap.ck
+pintos-raw/src/tests/vm/page-shuffle.ck
+pintos-raw/src/tests/vm/pt-bad-addr.ck
+pintos-raw/src/tests/vm/pt-bad-addr.c
+pintos-raw/src/tests/vm/sample.inc
+pintos-raw/src/tests/vm/mmap-remove.ck
+pintos-raw/src/tests/vm/mmap-over-data.ck
+pintos-raw/src/tests/vm/pt-grow-bad.c
+pintos-raw/src/tests/vm/mmap-zero.c
+pintos-raw/src/tests/vm/page-merge-mm.c
+pintos-raw/src/tests/vm/mmap-zero.ck
+pintos-raw/src/tests/vm/Rubric.robustness
+pintos-raw/src/tests/vm/parallel-merge.c
+pintos-raw/src/tests/vm/qsort.c
+pintos-raw/src/tests/vm/page-parallel.ck
+pintos-raw/src/tests/vm/pt-write-code2.ck
+pintos-raw/src/tests/vm/pt-big-stk-obj.ck
+pintos-raw/src/tests/lib.c
+pintos-raw/src/tests/Make.tests
+pintos-raw/src/tests/cksum.pm
+pintos-raw/src/tests/internal/
+pintos-raw/src/tests/internal/stdio.c
+pintos-raw/src/tests/internal/list.c
+pintos-raw/src/tests/internal/stdlib.c
+pintos-raw/src/tests/filesys/
+pintos-raw/src/tests/filesys/Grading.with-vm
+pintos-raw/src/tests/filesys/base/
+pintos-raw/src/tests/filesys/base/sm-full.ck
+pintos-raw/src/tests/filesys/base/child-syn-wrt.c
+pintos-raw/src/tests/filesys/base/random.inc
+pintos-raw/src/tests/filesys/base/syn-write.ck
+pintos-raw/src/tests/filesys/base/sm-full.c
+pintos-raw/src/tests/filesys/base/sm-seq-block.c
+pintos-raw/src/tests/filesys/base/lg-full.c
+pintos-raw/src/tests/filesys/base/lg-create.c
+pintos-raw/src/tests/filesys/base/lg-random.ck
+pintos-raw/src/tests/filesys/base/sm-seq-random.ck
+pintos-raw/src/tests/filesys/base/syn-read.h
+pintos-raw/src/tests/filesys/base/Rubric
+pintos-raw/src/tests/filesys/base/sm-create.c
+pintos-raw/src/tests/filesys/base/syn-remove.ck
+pintos-raw/src/tests/filesys/base/lg-seq-random.ck
+pintos-raw/src/tests/filesys/base/syn-write.c
+pintos-raw/src/tests/filesys/base/lg-seq-random.c
+pintos-raw/src/tests/filesys/base/sm-create.ck
+pintos-raw/src/tests/filesys/base/syn-write.h
+pintos-raw/src/tests/filesys/base/seq-random.inc
+pintos-raw/src/tests/filesys/base/syn-remove.c
+pintos-raw/src/tests/filesys/base/sm-random.ck
+pintos-raw/src/tests/filesys/base/syn-read.c
+pintos-raw/src/tests/filesys/base/lg-full.ck
+pintos-raw/src/tests/filesys/base/sm-random.c
+pintos-raw/src/tests/filesys/base/Make.tests
+pintos-raw/src/tests/filesys/base/lg-seq-block.c
+pintos-raw/src/tests/filesys/base/lg-create.ck
+pintos-raw/src/tests/filesys/base/sm-seq-block.ck
+pintos-raw/src/tests/filesys/base/lg-random.c
+pintos-raw/src/tests/filesys/base/syn-read.ck
+pintos-raw/src/tests/filesys/base/full.inc
+pintos-raw/src/tests/filesys/base/lg-seq-block.ck
+pintos-raw/src/tests/filesys/base/sm-seq-random.c
+pintos-raw/src/tests/filesys/base/child-syn-read.c
+pintos-raw/src/tests/filesys/base/seq-block.inc
+pintos-raw/src/tests/filesys/create.inc
+pintos-raw/src/tests/filesys/extended/
+pintos-raw/src/tests/filesys/extended/dir-vine.ck
+pintos-raw/src/tests/filesys/extended/grow-root-sm.c
+pintos-raw/src/tests/filesys/extended/grow-seq.inc
+pintos-raw/src/tests/filesys/extended/grow-file-size-persistence.ck
+pintos-raw/src/tests/filesys/extended/dir-rm-root-persistence.ck
+pintos-raw/src/tests/filesys/extended/tar.c
+pintos-raw/src/tests/filesys/extended/mk-tree.h
+pintos-raw/src/tests/filesys/extended/dir-mk-tree.c
+pintos-raw/src/tests/filesys/extended/dir-rmdir-persistence.ck
+pintos-raw/src/tests/filesys/extended/child-syn-rw.c
+pintos-raw/src/tests/filesys/extended/dir-under-file.c
+pintos-raw/src/tests/filesys/extended/dir-mkdir.c
+pintos-raw/src/tests/filesys/extended/dir-over-file.ck
+pintos-raw/src/tests/filesys/extended/dir-rm-parent.ck
+pintos-raw/src/tests/filesys/extended/dir-vine.c
+pintos-raw/src/tests/filesys/extended/grow-two-files.c
+pintos-raw/src/tests/filesys/extended/dir-rm-root.ck
+pintos-raw/src/tests/filesys/extended/mk-tree.c
+pintos-raw/src/tests/filesys/extended/grow-root-lg.ck
+pintos-raw/src/tests/filesys/extended/dir-rm-root.c
+pintos-raw/src/tests/filesys/extended/Rubric.persistence
+pintos-raw/src/tests/filesys/extended/grow-seq-lg-persistence.ck
+pintos-raw/src/tests/filesys/extended/dir-open-persistence.ck
+pintos-raw/src/tests/filesys/extended/dir-mk-tree.ck
+pintos-raw/src/tests/filesys/extended/grow-tell.c
+pintos-raw/src/tests/filesys/extended/dir-over-file-persistence.ck
+pintos-raw/src/tests/filesys/extended/dir-rm-parent.c
+pintos-raw/src/tests/filesys/extended/grow-tell.ck
+pintos-raw/src/tests/filesys/extended/grow-dir-lg.c
+pintos-raw/src/tests/filesys/extended/grow-root-lg-persistence.ck
+pintos-raw/src/tests/filesys/extended/grow-root-sm.ck
+pintos-raw/src/tests/filesys/extended/grow-seq-sm.ck
+pintos-raw/src/tests/filesys/extended/dir-vine-persistence.ck
+pintos-raw/src/tests/filesys/extended/Rubric.functionality
+pintos-raw/src/tests/filesys/extended/grow-seq-sm.c
+pintos-raw/src/tests/filesys/extended/grow-two-files-persistence.ck
+pintos-raw/src/tests/filesys/extended/dir-rm-tree.c
+pintos-raw/src/tests/filesys/extended/grow-file-size.ck
+pintos-raw/src/tests/filesys/extended/syn-rw-persistence.ck
+pintos-raw/src/tests/filesys/extended/dir-empty-name.c
+pintos-raw/src/tests/filesys/extended/grow-sparse-persistence.ck
+pintos-raw/src/tests/filesys/extended/grow-root-sm-persistence.ck
+pintos-raw/src/tests/filesys/extended/dir-open.c
+pintos-raw/src/tests/filesys/extended/grow-seq-lg.ck
+pintos-raw/src/tests/filesys/extended/syn-rw.h
+pintos-raw/src/tests/filesys/extended/dir-rm-cwd-persistence.ck
+pintos-raw/src/tests/filesys/extended/syn-rw.c
+pintos-raw/src/tests/filesys/extended/grow-two-files.ck
+pintos-raw/src/tests/filesys/extended/dir-mkdir.ck
+pintos-raw/src/tests/filesys/extended/dir-rm-cwd.ck
+pintos-raw/src/tests/filesys/extended/Make.tests
+pintos-raw/src/tests/filesys/extended/dir-rmdir.c
+pintos-raw/src/tests/filesys/extended/dir-rm-parent-persistence.ck
+pintos-raw/src/tests/filesys/extended/grow-root-lg.c
+pintos-raw/src/tests/filesys/extended/grow-sparse.ck
+pintos-raw/src/tests/filesys/extended/dir-rm-tree-persistence.ck
+pintos-raw/src/tests/filesys/extended/grow-create-persistence.ck
+pintos-raw/src/tests/filesys/extended/grow-dir-lg.ck
+pintos-raw/src/tests/filesys/extended/grow-seq-lg.c
+pintos-raw/src/tests/filesys/extended/dir-mkdir-persistence.ck
+pintos-raw/src/tests/filesys/extended/dir-rm-cwd.c
+pintos-raw/src/tests/filesys/extended/dir-rmdir.ck
+pintos-raw/src/tests/filesys/extended/dir-mk-tree-persistence.ck
+pintos-raw/src/tests/filesys/extended/Rubric.robustness
+pintos-raw/src/tests/filesys/extended/syn-rw.ck
+pintos-raw/src/tests/filesys/extended/grow-sparse.c
+pintos-raw/src/tests/filesys/extended/dir-rm-tree.ck
+pintos-raw/src/tests/filesys/extended/grow-dir-lg-persistence.ck
+pintos-raw/src/tests/filesys/extended/dir-empty-name-persistence.ck
+pintos-raw/src/tests/filesys/extended/grow-file-size.c
+pintos-raw/src/tests/filesys/extended/grow-dir.inc
+pintos-raw/src/tests/filesys/extended/dir-over-file.c
+pintos-raw/src/tests/filesys/extended/dir-under-file-persistence.ck
+pintos-raw/src/tests/filesys/extended/grow-create.c
+pintos-raw/src/tests/filesys/extended/dir-under-file.ck
+pintos-raw/src/tests/filesys/extended/grow-seq-sm-persistence.ck
+pintos-raw/src/tests/filesys/extended/grow-create.ck
+pintos-raw/src/tests/filesys/extended/dir-empty-name.ck
+pintos-raw/src/tests/filesys/extended/dir-open.ck
+pintos-raw/src/tests/filesys/extended/grow-tell-persistence.ck
+pintos-raw/src/tests/filesys/seq-test.h
+pintos-raw/src/tests/filesys/Grading.no-vm
+pintos-raw/src/tests/filesys/seq-test.c
+pintos-raw/src/tests/arc4.h
+pintos-raw/src/tests/arc4.c
+pintos-raw/src/tests/cksum.h
+pintos-raw/src/examples/
+pintos-raw/src/examples/ls.c
+pintos-raw/src/examples/bubsort.c
+pintos-raw/src/examples/hex-dump.c
+pintos-raw/src/examples/mcp.c
+pintos-raw/src/examples/lineup.c
+pintos-raw/src/examples/mkdir.c
+pintos-raw/src/examples/echo.c
+pintos-raw/src/examples/cmp.c
+pintos-raw/src/examples/recursor.c
+pintos-raw/src/examples/shell.c
+pintos-raw/src/examples/mcat.c
+pintos-raw/src/examples/pwd.c
+pintos-raw/src/examples/cp.c
+pintos-raw/src/examples/Makefile
+pintos-raw/src/examples/.gitignore
+pintos-raw/src/examples/lib/
+pintos-raw/src/examples/lib/user/
+pintos-raw/src/examples/lib/user/.dummy
+pintos-raw/src/examples/lib/user/.gitignore
+pintos-raw/src/examples/lib/.gitignore
+pintos-raw/src/examples/rm.c
+pintos-raw/src/examples/halt.c
+pintos-raw/src/examples/matmult.c
+pintos-raw/src/examples/insult.c
+pintos-raw/src/examples/cat.c
+pintos-raw/src/misc/
+pintos-raw/src/misc/bochs-2.2.6-triple-fault.patch
+pintos-raw/src/misc/bochs-2.2.6-jitter.patch
+pintos-raw/src/misc/bochs-2.6.2-xrandr-pkgconfig.patch
+pintos-raw/src/misc/bochs-2.6.2-jitter-plus-segv.patch
+pintos-raw/src/misc/gcc-3.3.6-cross-howto
+pintos-raw/src/misc/bochs-2.2.6-solaris-tty.patch
+pintos-raw/src/misc/bochs-2.2.6-page-fault-segv.patch
+pintos-raw/src/misc/bochs-2.2.6-namespace.patch
+pintos-raw/src/misc/bochs-2.2.6-gdbstub-ENN.patch
+pintos-raw/src/misc/bochs-2.6.2-build.sh
+pintos-raw/src/misc/bochs-2.2.6-big-endian.patch
+pintos-raw/src/misc/bochs-2.2.6-solaris-link.patch
+pintos-raw/src/misc/bochs-2.2.6-ms-extensions.patch
+pintos-raw/src/misc/gdb-macros
+pintos-raw/src/misc/bochs-2.2.6-paranoia.patch
+pintos-raw/src/misc/bochs-2.2.6-build.sh
+pintos-raw/src/Makefile.kernel
+pintos-raw/src/devices/
+pintos-raw/src/devices/pit.h
+pintos-raw/src/devices/vga.c
+pintos-raw/src/devices/ide.c
+pintos-raw/src/devices/intq.h
+pintos-raw/src/devices/intq.c
+pintos-raw/src/devices/block.c
+pintos-raw/src/devices/speaker.c
+pintos-raw/src/devices/speaker.h
+pintos-raw/src/devices/vga.h
+pintos-raw/src/devices/input.h
+pintos-raw/src/devices/ide.h
+pintos-raw/src/devices/timer.c
+pintos-raw/src/devices/kbd.c
+pintos-raw/src/devices/serial.c
+pintos-raw/src/devices/input.c
+pintos-raw/src/devices/rtc.c
+pintos-raw/src/devices/shutdown.c
+pintos-raw/src/devices/rtc.h
+pintos-raw/src/devices/partition.c
+pintos-raw/src/devices/block.h
+pintos-raw/src/devices/serial.h
+pintos-raw/src/devices/timer.h
+pintos-raw/src/devices/partition.h
+pintos-raw/src/devices/kbd.h
+pintos-raw/src/devices/pit.c
+pintos-raw/src/devices/shutdown.h
+pintos-raw/src/vm/
+pintos-raw/src/vm/Makefile
+pintos-raw/src/vm/.gitignore
+pintos-raw/src/vm/Make.vars
+pintos-raw/src/utils/
+pintos-raw/src/utils/backtrace
+pintos-raw/src/utils/setitimer-helper.c
+pintos-raw/src/utils/pintos
+pintos-raw/src/utils/pintos-mkdisk
+pintos-raw/src/utils/pintos-set-cmdline
+pintos-raw/src/utils/squish-unix.c
+pintos-raw/src/utils/Pintos.pm
+pintos-raw/src/utils/squish-pty.c
+pintos-raw/src/utils/Makefile
+pintos-raw/src/utils/.gitignore
+pintos-raw/src/utils/pintos-gdb
+pintos-raw/src/Makefile
+pintos-raw/src/Make.config
+pintos-raw/src/.gitignore
+pintos-raw/src/lib/
+pintos-raw/src/lib/stdarg.h
+pintos-raw/src/lib/stddef.h
+pintos-raw/src/lib/stdint.h
+pintos-raw/src/lib/kernel/
+pintos-raw/src/lib/kernel/console.c
+pintos-raw/src/lib/kernel/hash.c
+pintos-raw/src/lib/kernel/stdio.h
+pintos-raw/src/lib/kernel/hash.h
+pintos-raw/src/lib/kernel/debug.c
+pintos-raw/src/lib/kernel/list.h
+pintos-raw/src/lib/kernel/list.c
+pintos-raw/src/lib/kernel/console.h
+pintos-raw/src/lib/kernel/bitmap.c
+pintos-raw/src/lib/kernel/bitmap.h
+pintos-raw/src/lib/limits.h
+pintos-raw/src/lib/user/
+pintos-raw/src/lib/user/user.lds
+pintos-raw/src/lib/user/console.c
+pintos-raw/src/lib/user/stdio.h
+pintos-raw/src/lib/user/syscall.c
+pintos-raw/src/lib/user/syscall.h
+pintos-raw/src/lib/user/debug.c
+pintos-raw/src/lib/user/entry.c
+pintos-raw/src/lib/ctype.h
+pintos-raw/src/lib/ustar.h
+pintos-raw/src/lib/stdio.h
+pintos-raw/src/lib/stdio.c
+pintos-raw/src/lib/packed.h
+pintos-raw/src/lib/random.h
+pintos-raw/src/lib/debug.h
+pintos-raw/src/lib/string.c
+pintos-raw/src/lib/debug.c
+pintos-raw/src/lib/inttypes.h
+pintos-raw/src/lib/arithmetic.c
+pintos-raw/src/lib/stdbool.h
+pintos-raw/src/lib/random.c
+pintos-raw/src/lib/syscall-nr.h
+pintos-raw/src/lib/string.h
+pintos-raw/src/lib/round.h
+pintos-raw/src/lib/ustar.c
+pintos-raw/src/lib/stdlib.h
+pintos-raw/src/lib/stdlib.c
+pintos-raw/src/Makefile.userprog
+pintos-raw/src/filesys/
+pintos-raw/src/filesys/directory.c
+pintos-raw/src/filesys/directory.h
+pintos-raw/src/filesys/file.h
+pintos-raw/src/filesys/filesys.c
+pintos-raw/src/filesys/file.c
+pintos-raw/src/filesys/fsutil.c
+pintos-raw/src/filesys/inode.c
+pintos-raw/src/filesys/free-map.c
+pintos-raw/src/filesys/free-map.h
+pintos-raw/src/filesys/inode.h
+pintos-raw/src/filesys/Makefile
+pintos-raw/src/filesys/off_t.h
+pintos-raw/src/filesys/.gitignore
+pintos-raw/src/filesys/Make.vars
+pintos-raw/src/filesys/fsutil.h
+pintos-raw/src/filesys/filesys.h
+pintos-raw/src/LICENSE
+pintos-raw/src/Makefile.build
+mkdir -p build/devices
+mkdir -p build/lib
+mkdir -p build/lib/kernel
+mkdir -p build/lib/user
+mkdir -p build/tests/threads
+mkdir -p build/threads
+cp ../Makefile.build build/Makefile
+cd build && make all
+make[1]: Entering directory '/home/wuh/cs230-grading/pintos/src/threads/build'
+i386-elf-gcc -E -nostdinc -I../.. -I../../lib -I../../lib/kernel -P ../../threads/kernel.lds.S > threads/kernel.lds.s
+i386-elf-gcc -Wa,--gstabs,--32 -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o threads/start.o ../../threads/start.S
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o threads/init.o ../../threads/init.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o threads/thread.o ../../threads/thread.c
+i386-elf-gcc -Wa,--gstabs,--32 -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o threads/switch.o ../../threads/switch.S
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o threads/interrupt.o ../../threads/interrupt.c
+i386-elf-gcc -Wa,--gstabs,--32 -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o threads/intr-stubs.o ../../threads/intr-stubs.S
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o threads/synch.o ../../threads/synch.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o threads/palloc.o ../../threads/palloc.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o threads/malloc.o ../../threads/malloc.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/pit.o ../../devices/pit.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/timer.o ../../devices/timer.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/kbd.o ../../devices/kbd.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/vga.o ../../devices/vga.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/serial.o ../../devices/serial.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/block.o ../../devices/block.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/partition.o ../../devices/partition.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/ide.o ../../devices/ide.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/input.o ../../devices/input.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/intq.o ../../devices/intq.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/rtc.o ../../devices/rtc.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/shutdown.o ../../devices/shutdown.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o devices/speaker.o ../../devices/speaker.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/debug.o ../../lib/debug.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/random.o ../../lib/random.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/stdio.o ../../lib/stdio.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/stdlib.o ../../lib/stdlib.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/string.o ../../lib/string.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/arithmetic.o ../../lib/arithmetic.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/ustar.o ../../lib/ustar.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/kernel/debug.o ../../lib/kernel/debug.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/kernel/list.o ../../lib/kernel/list.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/kernel/bitmap.o ../../lib/kernel/bitmap.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/kernel/hash.o ../../lib/kernel/hash.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o lib/kernel/console.o ../../lib/kernel/console.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/tests.o ../../tests/threads/tests.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/alarm-wait.o ../../tests/threads/alarm-wait.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/alarm-simultaneous.o ../../tests/threads/alarm-simultaneous.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/alarm-priority.o ../../tests/threads/alarm-priority.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/alarm-zero.o ../../tests/threads/alarm-zero.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/alarm-negative.o ../../tests/threads/alarm-negative.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-change.o ../../tests/threads/priority-change.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-donate-one.o ../../tests/threads/priority-donate-one.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-donate-multiple.o ../../tests/threads/priority-donate-multiple.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-donate-multiple2.o ../../tests/threads/priority-donate-multiple2.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-donate-nest.o ../../tests/threads/priority-donate-nest.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-donate-sema.o ../../tests/threads/priority-donate-sema.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-donate-lower.o ../../tests/threads/priority-donate-lower.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-fifo.o ../../tests/threads/priority-fifo.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-preempt.o ../../tests/threads/priority-preempt.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-sema.o ../../tests/threads/priority-sema.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-condvar.o ../../tests/threads/priority-condvar.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/priority-donate-chain.o ../../tests/threads/priority-donate-chain.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/mlfqs-load-1.o ../../tests/threads/mlfqs-load-1.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/mlfqs-load-60.o ../../tests/threads/mlfqs-load-60.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/mlfqs-load-avg.o ../../tests/threads/mlfqs-load-avg.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/mlfqs-recent-1.o ../../tests/threads/mlfqs-recent-1.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/mlfqs-fair.o ../../tests/threads/mlfqs-fair.c
+i386-elf-gcc -m32 -g -msoft-float -O0 -fno-stack-protector -nostdinc -I../.. -I../../lib -I../../lib/kernel  -c -o tests/threads/mlfqs-block.o ../../tests/threads/mlfqs-block.c
+i386-elf-ld -T threads/kernel.lds.s -o kernel.o threads/start.o threads/init.o threads/thread.o threads/switch.o threads/interrupt.o threads/intr-stubs.o threads/synch.o threads/palloc.o threads/malloc.o devices/pit.o devices/timer.o devices/kbd.o devices/vga.o devices/serial.o devices/block.o devices/partition.o devices/ide.o devices/input.o devices/intq.o devices/rtc.o devices/shutdown.o devices/speaker.o lib/debug.o lib/random.o lib/stdio.o lib/stdlib.o lib/string.o lib/arithmetic.o lib/ustar.o lib/kernel/debug.o lib/kernel/list.o lib/kernel/bitmap.o lib/kernel/hash.o lib/kernel/console.o tests/threads/tests.o tests/threads/alarm-wait.o tests/threads/alarm-simultaneous.o tests/threads/alarm-priority.o tests/threads/alarm-zero.o tests/threads/alarm-negative.o tests/threads/priority-change.o tests/threads/priority-donate-one.o tests/threads/priority-donate-multiple.o tests/threads/priority-donate-multiple2.o tests/threads/priority-donate-nest.o tests/threads/priority-donate-sema.o tests/threads/priority-donate-lower.o tests/threads/priority-fifo.o tests/threads/priority-preempt.o tests/threads/priority-sema.o tests/threads/priority-condvar.o tests/threads/priority-donate-chain.o tests/threads/mlfqs-load-1.o tests/threads/mlfqs-load-60.o tests/threads/mlfqs-load-avg.o tests/threads/mlfqs-recent-1.o tests/threads/mlfqs-fair.o tests/threads/mlfqs-block.o
+i386-elf-objcopy -R .note -R .comment -S kernel.o kernel.bin
+i386-elf-gcc -c ../../threads/loader.S -o threads/loader.o -Wa,--gstabs,--32 -nostdinc -I../.. -I../../lib 
+i386-elf-ld -N -e 0 -Ttext 0x7c00 --oformat binary -o loader.bin threads/loader.o
+make[1]: Leaving directory '/home/wuh/cs230-grading/pintos/src/threads/build'
+pintos -v -k -T 60 --bochs  -- -q  run alarm-single < /dev/null 2> tests/threads/alarm-single.errors > tests/threads/alarm-single.output
+perl -I../.. ../../tests/threads/alarm-single.ck tests/threads/alarm-single tests/threads/alarm-single.result
+pass tests/threads/alarm-single
+pintos -v -k -T 60 --bochs  -- -q  run alarm-multiple < /dev/null 2> tests/threads/alarm-multiple.errors > tests/threads/alarm-multiple.output
+perl -I../.. ../../tests/threads/alarm-multiple.ck tests/threads/alarm-multiple tests/threads/alarm-multiple.result
+pass tests/threads/alarm-multiple
+pintos -v -k -T 60 --bochs  -- -q  run alarm-simultaneous < /dev/null 2> tests/threads/alarm-simultaneous.errors > tests/threads/alarm-simultaneous.output
+perl -I../.. ../../tests/threads/alarm-simultaneous.ck tests/threads/alarm-simultaneous tests/threads/alarm-simultaneous.result
+pass tests/threads/alarm-simultaneous
+pintos -v -k -T 60 --bochs  -- -q  run alarm-priority < /dev/null 2> tests/threads/alarm-priority.errors > tests/threads/alarm-priority.output
+perl -I../.. ../../tests/threads/alarm-priority.ck tests/threads/alarm-priority tests/threads/alarm-priority.result
+pass tests/threads/alarm-priority
+pintos -v -k -T 60 --bochs  -- -q  run alarm-zero < /dev/null 2> tests/threads/alarm-zero.errors > tests/threads/alarm-zero.output
+perl -I../.. ../../tests/threads/alarm-zero.ck tests/threads/alarm-zero tests/threads/alarm-zero.result
+pass tests/threads/alarm-zero
+pintos -v -k -T 60 --bochs  -- -q  run alarm-negative < /dev/null 2> tests/threads/alarm-negative.errors > tests/threads/alarm-negative.output
+perl -I../.. ../../tests/threads/alarm-negative.ck tests/threads/alarm-negative tests/threads/alarm-negative.result
+pass tests/threads/alarm-negative
+pintos -v -k -T 60 --bochs  -- -q  run priority-change < /dev/null 2> tests/threads/priority-change.errors > tests/threads/priority-change.output
+perl -I../.. ../../tests/threads/priority-change.ck tests/threads/priority-change tests/threads/priority-change.result
+pass tests/threads/priority-change
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-one < /dev/null 2> tests/threads/priority-donate-one.errors > tests/threads/priority-donate-one.output
+perl -I../.. ../../tests/threads/priority-donate-one.ck tests/threads/priority-donate-one tests/threads/priority-donate-one.result
+FAIL tests/threads/priority-donate-one
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (priority-donate-one) begin
+  (priority-donate-one) This thread should have priority 32.  Actual priority: 32.
+  (priority-donate-one) This thread should have priority 33.  Actual priority: 33.
+  (priority-donate-one) acquire2: got the lock
+  (priority-donate-one) acquire2: done
+  (priority-donate-one) acquire1: got the lock
+  (priority-donate-one) acquire1: done
+  (priority-donate-one) acquire2, acquire1 must already have finished, in that order.
+  (priority-donate-one) This should be the last line before finishing this test.
+  (priority-donate-one) end
+Differences in `diff -u' format:
+  (priority-donate-one) begin
+- (priority-donate-one) This thread should have priority 32.  Actual priority: 32.
+- (priority-donate-one) This thread should have priority 33.  Actual priority: 33.
+- (priority-donate-one) acquire2: got the lock
+- (priority-donate-one) acquire2: done
+- (priority-donate-one) acquire1: got the lock
+- (priority-donate-one) acquire1: done
++ (priority-donate-one) This thread should have priority 32.  Actual priority: 31.
++ (priority-donate-one) This thread should have priority 33.  Actual priority: 31.
+  (priority-donate-one) acquire2, acquire1 must already have finished, in that order.
+  (priority-donate-one) This should be the last line before finishing this test.
+  (priority-donate-one) end
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-multiple < /dev/null 2> tests/threads/priority-donate-multiple.errors > tests/threads/priority-donate-multiple.output
+perl -I../.. ../../tests/threads/priority-donate-multiple.ck tests/threads/priority-donate-multiple tests/threads/priority-donate-multiple.result
+FAIL tests/threads/priority-donate-multiple
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (priority-donate-multiple) begin
+  (priority-donate-multiple) Main thread should have priority 32.  Actual priority: 32.
+  (priority-donate-multiple) Main thread should have priority 33.  Actual priority: 33.
+  (priority-donate-multiple) Thread b acquired lock b.
+  (priority-donate-multiple) Thread b finished.
+  (priority-donate-multiple) Thread b should have just finished.
+  (priority-donate-multiple) Main thread should have priority 32.  Actual priority: 32.
+  (priority-donate-multiple) Thread a acquired lock a.
+  (priority-donate-multiple) Thread a finished.
+  (priority-donate-multiple) Thread a should have just finished.
+  (priority-donate-multiple) Main thread should have priority 31.  Actual priority: 31.
+  (priority-donate-multiple) end
+Differences in `diff -u' format:
+  (priority-donate-multiple) begin
+- (priority-donate-multiple) Main thread should have priority 32.  Actual priority: 32.
+- (priority-donate-multiple) Main thread should have priority 33.  Actual priority: 33.
+- (priority-donate-multiple) Thread b acquired lock b.
+- (priority-donate-multiple) Thread b finished.
++ (priority-donate-multiple) Main thread should have priority 32.  Actual priority: 31.
++ (priority-donate-multiple) Main thread should have priority 33.  Actual priority: 31.
+  (priority-donate-multiple) Thread b should have just finished.
+- (priority-donate-multiple) Main thread should have priority 32.  Actual priority: 32.
+- (priority-donate-multiple) Thread a acquired lock a.
+- (priority-donate-multiple) Thread a finished.
++ (priority-donate-multiple) Main thread should have priority 32.  Actual priority: 31.
+  (priority-donate-multiple) Thread a should have just finished.
+  (priority-donate-multiple) Main thread should have priority 31.  Actual priority: 31.
+  (priority-donate-multiple) end
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-multiple2 < /dev/null 2> tests/threads/priority-donate-multiple2.errors > tests/threads/priority-donate-multiple2.output
+perl -I../.. ../../tests/threads/priority-donate-multiple2.ck tests/threads/priority-donate-multiple2 tests/threads/priority-donate-multiple2.result
+FAIL tests/threads/priority-donate-multiple2
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (priority-donate-multiple2) begin
+  (priority-donate-multiple2) Main thread should have priority 34.  Actual priority: 34.
+  (priority-donate-multiple2) Main thread should have priority 36.  Actual priority: 36.
+  (priority-donate-multiple2) Main thread should have priority 36.  Actual priority: 36.
+  (priority-donate-multiple2) Thread b acquired lock b.
+  (priority-donate-multiple2) Thread b finished.
+  (priority-donate-multiple2) Thread a acquired lock a.
+  (priority-donate-multiple2) Thread a finished.
+  (priority-donate-multiple2) Thread c finished.
+  (priority-donate-multiple2) Threads b, a, c should have just finished, in that order.
+  (priority-donate-multiple2) Main thread should have priority 31.  Actual priority: 31.
+  (priority-donate-multiple2) end
+Differences in `diff -u' format:
+  (priority-donate-multiple2) begin
+- (priority-donate-multiple2) Main thread should have priority 34.  Actual priority: 34.
+- (priority-donate-multiple2) Main thread should have priority 36.  Actual priority: 36.
+- (priority-donate-multiple2) Main thread should have priority 36.  Actual priority: 36.
+- (priority-donate-multiple2) Thread b acquired lock b.
+- (priority-donate-multiple2) Thread b finished.
+- (priority-donate-multiple2) Thread a acquired lock a.
+- (priority-donate-multiple2) Thread a finished.
++ (priority-donate-multiple2) Main thread should have priority 34.  Actual priority: 31.
+  (priority-donate-multiple2) Thread c finished.
++ (priority-donate-multiple2) Main thread should have priority 36.  Actual priority: 31.
++ (priority-donate-multiple2) Main thread should have priority 36.  Actual priority: 31.
+  (priority-donate-multiple2) Threads b, a, c should have just finished, in that order.
+  (priority-donate-multiple2) Main thread should have priority 31.  Actual priority: 31.
+  (priority-donate-multiple2) end
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-nest < /dev/null 2> tests/threads/priority-donate-nest.errors > tests/threads/priority-donate-nest.output
+perl -I../.. ../../tests/threads/priority-donate-nest.ck tests/threads/priority-donate-nest tests/threads/priority-donate-nest.result
+FAIL tests/threads/priority-donate-nest
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (priority-donate-nest) begin
+  (priority-donate-nest) Low thread should have priority 32.  Actual priority: 32.
+  (priority-donate-nest) Low thread should have priority 33.  Actual priority: 33.
+  (priority-donate-nest) Medium thread should have priority 33.  Actual priority: 33.
+  (priority-donate-nest) Medium thread got the lock.
+  (priority-donate-nest) High thread got the lock.
+  (priority-donate-nest) High thread finished.
+  (priority-donate-nest) High thread should have just finished.
+  (priority-donate-nest) Middle thread finished.
+  (priority-donate-nest) Medium thread should just have finished.
+  (priority-donate-nest) Low thread should have priority 31.  Actual priority: 31.
+  (priority-donate-nest) end
+Differences in `diff -u' format:
+  (priority-donate-nest) begin
+- (priority-donate-nest) Low thread should have priority 32.  Actual priority: 32.
+- (priority-donate-nest) Low thread should have priority 33.  Actual priority: 33.
+- (priority-donate-nest) Medium thread should have priority 33.  Actual priority: 33.
++ (priority-donate-nest) Low thread should have priority 32.  Actual priority: 31.
++ (priority-donate-nest) Low thread should have priority 33.  Actual priority: 31.
++ (priority-donate-nest) Medium thread should have priority 33.  Actual priority: 32.
+  (priority-donate-nest) Medium thread got the lock.
+  (priority-donate-nest) High thread got the lock.
+  (priority-donate-nest) High thread finished.
+  (priority-donate-nest) High thread should have just finished.
+  (priority-donate-nest) Middle thread finished.
+  (priority-donate-nest) Medium thread should just have finished.
+  (priority-donate-nest) Low thread should have priority 31.  Actual priority: 31.
+  (priority-donate-nest) end
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-sema < /dev/null 2> tests/threads/priority-donate-sema.errors > tests/threads/priority-donate-sema.output
+perl -I../.. ../../tests/threads/priority-donate-sema.ck tests/threads/priority-donate-sema tests/threads/priority-donate-sema.result
+FAIL tests/threads/priority-donate-sema
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (priority-donate-sema) begin
+  (priority-donate-sema) Thread L acquired lock.
+  (priority-donate-sema) Thread L downed semaphore.
+  (priority-donate-sema) Thread H acquired lock.
+  (priority-donate-sema) Thread H finished.
+  (priority-donate-sema) Thread M finished.
+  (priority-donate-sema) Thread L finished.
+  (priority-donate-sema) Main thread finished.
+  (priority-donate-sema) end
+Differences in `diff -u' format:
+  (priority-donate-sema) begin
+  (priority-donate-sema) Thread L acquired lock.
+- (priority-donate-sema) Thread L downed semaphore.
+- (priority-donate-sema) Thread H acquired lock.
+- (priority-donate-sema) Thread H finished.
+- (priority-donate-sema) Thread M finished.
+- (priority-donate-sema) Thread L finished.
+  (priority-donate-sema) Main thread finished.
+  (priority-donate-sema) end
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-lower < /dev/null 2> tests/threads/priority-donate-lower.errors > tests/threads/priority-donate-lower.output
+perl -I../.. ../../tests/threads/priority-donate-lower.ck tests/threads/priority-donate-lower tests/threads/priority-donate-lower.result
+FAIL tests/threads/priority-donate-lower
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (priority-donate-lower) begin
+  (priority-donate-lower) Main thread should have priority 41.  Actual priority: 41.
+  (priority-donate-lower) Lowering base priority...
+  (priority-donate-lower) Main thread should have priority 41.  Actual priority: 41.
+  (priority-donate-lower) acquire: got the lock
+  (priority-donate-lower) acquire: done
+  (priority-donate-lower) acquire must already have finished.
+  (priority-donate-lower) Main thread should have priority 21.  Actual priority: 21.
+  (priority-donate-lower) end
+Differences in `diff -u' format:
+  (priority-donate-lower) begin
+- (priority-donate-lower) Main thread should have priority 41.  Actual priority: 41.
++ (priority-donate-lower) Main thread should have priority 41.  Actual priority: 31.
+  (priority-donate-lower) Lowering base priority...
+- (priority-donate-lower) Main thread should have priority 41.  Actual priority: 41.
+- (priority-donate-lower) acquire: got the lock
+- (priority-donate-lower) acquire: done
++ (priority-donate-lower) Main thread should have priority 41.  Actual priority: 21.
+  (priority-donate-lower) acquire must already have finished.
+- (priority-donate-lower) Main thread should have priority 21.  Actual priority: 21.
++ (priority-donate-lower) Main thread should have priority 21.  Actual priority: 31.
+  (priority-donate-lower) end
+pintos -v -k -T 60 --bochs  -- -q  run priority-fifo < /dev/null 2> tests/threads/priority-fifo.errors > tests/threads/priority-fifo.output
+perl -I../.. ../../tests/threads/priority-fifo.ck tests/threads/priority-fifo tests/threads/priority-fifo.result
+FAIL tests/threads/priority-fifo
+First iteration does not list all threads 0...15
+pintos -v -k -T 60 --bochs  -- -q  run priority-preempt < /dev/null 2> tests/threads/priority-preempt.errors > tests/threads/priority-preempt.output
+perl -I../.. ../../tests/threads/priority-preempt.ck tests/threads/priority-preempt tests/threads/priority-preempt.result
+pass tests/threads/priority-preempt
+pintos -v -k -T 60 --bochs  -- -q  run priority-sema < /dev/null 2> tests/threads/priority-sema.errors > tests/threads/priority-sema.output
+perl -I../.. ../../tests/threads/priority-sema.ck tests/threads/priority-sema tests/threads/priority-sema.result
+FAIL tests/threads/priority-sema
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (priority-sema) begin
+  (priority-sema) Thread priority 30 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) Thread priority 29 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) Thread priority 28 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) Thread priority 27 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) Thread priority 26 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) Thread priority 25 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) Thread priority 24 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) Thread priority 23 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) Thread priority 22 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) Thread priority 21 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) end
+Differences in `diff -u' format:
+  (priority-sema) begin
+- (priority-sema) Thread priority 30 woke up.
+  (priority-sema) Back in main thread.
+- (priority-sema) Thread priority 29 woke up.
+  (priority-sema) Back in main thread.
+- (priority-sema) Thread priority 28 woke up.
+  (priority-sema) Back in main thread.
+- (priority-sema) Thread priority 27 woke up.
+  (priority-sema) Back in main thread.
+- (priority-sema) Thread priority 26 woke up.
+  (priority-sema) Back in main thread.
+- (priority-sema) Thread priority 25 woke up.
+  (priority-sema) Back in main thread.
+- (priority-sema) Thread priority 24 woke up.
+  (priority-sema) Back in main thread.
+- (priority-sema) Thread priority 23 woke up.
+  (priority-sema) Back in main thread.
+- (priority-sema) Thread priority 22 woke up.
+  (priority-sema) Back in main thread.
+- (priority-sema) Thread priority 21 woke up.
+  (priority-sema) Back in main thread.
+  (priority-sema) end
+pintos -v -k -T 60 --bochs  -- -q  run priority-condvar < /dev/null 2> tests/threads/priority-condvar.errors > tests/threads/priority-condvar.output
+perl -I../.. ../../tests/threads/priority-condvar.ck tests/threads/priority-condvar tests/threads/priority-condvar.result
+FAIL tests/threads/priority-condvar
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (priority-condvar) begin
+  (priority-condvar) Thread priority 23 starting.
+  (priority-condvar) Thread priority 22 starting.
+  (priority-condvar) Thread priority 21 starting.
+  (priority-condvar) Thread priority 30 starting.
+  (priority-condvar) Thread priority 29 starting.
+  (priority-condvar) Thread priority 28 starting.
+  (priority-condvar) Thread priority 27 starting.
+  (priority-condvar) Thread priority 26 starting.
+  (priority-condvar) Thread priority 25 starting.
+  (priority-condvar) Thread priority 24 starting.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 30 woke up.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 29 woke up.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 28 woke up.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 27 woke up.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 26 woke up.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 25 woke up.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 24 woke up.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 23 woke up.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 22 woke up.
+  (priority-condvar) Signaling...
+  (priority-condvar) Thread priority 21 woke up.
+  (priority-condvar) end
+Differences in `diff -u' format:
+  (priority-condvar) begin
+- (priority-condvar) Thread priority 23 starting.
+- (priority-condvar) Thread priority 22 starting.
+- (priority-condvar) Thread priority 21 starting.
+- (priority-condvar) Thread priority 30 starting.
+- (priority-condvar) Thread priority 29 starting.
+- (priority-condvar) Thread priority 28 starting.
+- (priority-condvar) Thread priority 27 starting.
+- (priority-condvar) Thread priority 26 starting.
+- (priority-condvar) Thread priority 25 starting.
+- (priority-condvar) Thread priority 24 starting.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 30 woke up.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 29 woke up.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 28 woke up.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 27 woke up.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 26 woke up.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 25 woke up.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 24 woke up.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 23 woke up.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 22 woke up.
+  (priority-condvar) Signaling...
+- (priority-condvar) Thread priority 21 woke up.
+  (priority-condvar) end
+pintos -v -k -T 60 --bochs  -- -q  run priority-donate-chain < /dev/null 2> tests/threads/priority-donate-chain.errors > tests/threads/priority-donate-chain.output
+perl -I../.. ../../tests/threads/priority-donate-chain.ck tests/threads/priority-donate-chain tests/threads/priority-donate-chain.result
+FAIL tests/threads/priority-donate-chain
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (priority-donate-chain) begin
+  (priority-donate-chain) main got lock.
+  (priority-donate-chain) main should have priority 3.  Actual priority: 3.
+  (priority-donate-chain) main should have priority 6.  Actual priority: 6.
+  (priority-donate-chain) main should have priority 9.  Actual priority: 9.
+  (priority-donate-chain) main should have priority 12.  Actual priority: 12.
+  (priority-donate-chain) main should have priority 15.  Actual priority: 15.
+  (priority-donate-chain) main should have priority 18.  Actual priority: 18.
+  (priority-donate-chain) main should have priority 21.  Actual priority: 21.
+  (priority-donate-chain) thread 1 got lock
+  (priority-donate-chain) thread 1 should have priority 21. Actual priority: 21
+  (priority-donate-chain) thread 2 got lock
+  (priority-donate-chain) thread 2 should have priority 21. Actual priority: 21
+  (priority-donate-chain) thread 3 got lock
+  (priority-donate-chain) thread 3 should have priority 21. Actual priority: 21
+  (priority-donate-chain) thread 4 got lock
+  (priority-donate-chain) thread 4 should have priority 21. Actual priority: 21
+  (priority-donate-chain) thread 5 got lock
+  (priority-donate-chain) thread 5 should have priority 21. Actual priority: 21
+  (priority-donate-chain) thread 6 got lock
+  (priority-donate-chain) thread 6 should have priority 21. Actual priority: 21
+  (priority-donate-chain) thread 7 got lock
+  (priority-donate-chain) thread 7 should have priority 21. Actual priority: 21
+  (priority-donate-chain) thread 7 finishing with priority 21.
+  (priority-donate-chain) interloper 7 finished.
+  (priority-donate-chain) thread 6 finishing with priority 18.
+  (priority-donate-chain) interloper 6 finished.
+  (priority-donate-chain) thread 5 finishing with priority 15.
+  (priority-donate-chain) interloper 5 finished.
+  (priority-donate-chain) thread 4 finishing with priority 12.
+  (priority-donate-chain) interloper 4 finished.
+  (priority-donate-chain) thread 3 finishing with priority 9.
+  (priority-donate-chain) interloper 3 finished.
+  (priority-donate-chain) thread 2 finishing with priority 6.
+  (priority-donate-chain) interloper 2 finished.
+  (priority-donate-chain) thread 1 finishing with priority 3.
+  (priority-donate-chain) interloper 1 finished.
+  (priority-donate-chain) main finishing with priority 0.
+  (priority-donate-chain) end
+Differences in `diff -u' format:
+  (priority-donate-chain) begin
+  (priority-donate-chain) main got lock.
+- (priority-donate-chain) main should have priority 3.  Actual priority: 3.
+- (priority-donate-chain) main should have priority 6.  Actual priority: 6.
+- (priority-donate-chain) main should have priority 9.  Actual priority: 9.
+- (priority-donate-chain) main should have priority 12.  Actual priority: 12.
+- (priority-donate-chain) main should have priority 15.  Actual priority: 15.
+- (priority-donate-chain) main should have priority 18.  Actual priority: 18.
+- (priority-donate-chain) main should have priority 21.  Actual priority: 21.
+- (priority-donate-chain) thread 1 got lock
+- (priority-donate-chain) thread 1 should have priority 21. Actual priority: 21
+- (priority-donate-chain) thread 2 got lock
+- (priority-donate-chain) thread 2 should have priority 21. Actual priority: 21
+- (priority-donate-chain) thread 3 got lock
+- (priority-donate-chain) thread 3 should have priority 21. Actual priority: 21
+- (priority-donate-chain) thread 4 got lock
+- (priority-donate-chain) thread 4 should have priority 21. Actual priority: 21
+- (priority-donate-chain) thread 5 got lock
+- (priority-donate-chain) thread 5 should have priority 21. Actual priority: 21
+- (priority-donate-chain) thread 6 got lock
+- (priority-donate-chain) thread 6 should have priority 21. Actual priority: 21
+- (priority-donate-chain) thread 7 got lock
+- (priority-donate-chain) thread 7 should have priority 21. Actual priority: 21
+- (priority-donate-chain) thread 7 finishing with priority 21.
+- (priority-donate-chain) interloper 7 finished.
+- (priority-donate-chain) thread 6 finishing with priority 18.
+- (priority-donate-chain) interloper 6 finished.
+- (priority-donate-chain) thread 5 finishing with priority 15.
+- (priority-donate-chain) interloper 5 finished.
+- (priority-donate-chain) thread 4 finishing with priority 12.
+- (priority-donate-chain) interloper 4 finished.
+- (priority-donate-chain) thread 3 finishing with priority 9.
+- (priority-donate-chain) interloper 3 finished.
+- (priority-donate-chain) thread 2 finishing with priority 6.
+- (priority-donate-chain) interloper 2 finished.
+- (priority-donate-chain) thread 1 finishing with priority 3.
+- (priority-donate-chain) interloper 1 finished.
+- (priority-donate-chain) main finishing with priority 0.
++ (priority-donate-chain) main should have priority 3.  Actual priority: 31.
++ (priority-donate-chain) main should have priority 6.  Actual priority: 31.
++ (priority-donate-chain) main should have priority 9.  Actual priority: 31.
++ (priority-donate-chain) main should have priority 12.  Actual priority: 31.
++ (priority-donate-chain) main should have priority 15.  Actual priority: 31.
++ (priority-donate-chain) main should have priority 18.  Actual priority: 31.
++ (priority-donate-chain) main should have priority 21.  Actual priority: 31.
++ (priority-donate-chain) main finishing with priority 31.
+  (priority-donate-chain) end
+pintos -v -k -T 480 --bochs  -- -q -mlfqs run mlfqs-load-1 < /dev/null 2> tests/threads/mlfqs-load-1.errors > tests/threads/mlfqs-load-1.output
+perl -I../.. ../../tests/threads/mlfqs-load-1.ck tests/threads/mlfqs-load-1 tests/threads/mlfqs-load-1.result
+FAIL tests/threads/mlfqs-load-1
+Kernel panic in run: PANIC at ../../tests/threads/tests.c:93 in fail(): test failed
+Call stack: 0xc00297d0 0xc002bba1 0xc002d9d0 0xc002bac8 0xc0020788 0xc0020866 0xc0020364
+Translation of call stack:
+0xc00297d0: debug_panic (.../../lib/kernel/debug.c:38)
+0xc002bba1: pass (.../tests/threads/tests.c:99)
+0xc002d9d0: test_mlfqs_load_1 (...threads/mlfqs-load-1.c:41)
+0xc002bac8: run_test (.../tests/threads/tests.c:57)
+0xc0020788: run_task (.../../../threads/init.c:290)
+0xc0020866: run_actions (.../../../threads/init.c:340)
+0xc0020364: main (.../../../threads/init.c:133)
+pintos -v -k -T 480 --bochs  -- -q -mlfqs run mlfqs-load-60 < /dev/null 2> tests/threads/mlfqs-load-60.errors > tests/threads/mlfqs-load-60.output
+perl -I../.. ../../tests/threads/mlfqs-load-60.ck tests/threads/mlfqs-load-60 tests/threads/mlfqs-load-60.result
+FAIL tests/threads/mlfqs-load-60
+Some load average values were missing or differed from those expected by more than 3.5.
+  time   actual <-> expected explanation
+------ -------- --- -------- ----------------------------------------
+     2     0.00  =  2.95     
+     4     0.00 <<< 4.84     Too small, by 1.34.
+     6     0.00 <<< 6.66     Too small, by 3.16.
+     8     0.00 <<< 8.42     Too small, by 4.92.
+    10     0.00 <<< 10.13    Too small, by 6.63.
+    12     0.00 <<< 11.78    Too small, by 8.28.
+    14     0.00 <<< 13.37    Too small, by 9.87.
+    16     0.00 <<< 14.91    Too small, by 11.41.
+    18     0.00 <<< 16.40    Too small, by 12.90.
+    20     0.00 <<< 17.84    Too small, by 14.34.
+    22     0.00 <<< 19.24    Too small, by 15.74.
+    24     0.00 <<< 20.58    Too small, by 17.08.
+    26     0.00 <<< 21.89    Too small, by 18.39.
+    28     0.00 <<< 23.15    Too small, by 19.65.
+    30     0.00 <<< 24.37    Too small, by 20.87.
+    32     0.00 <<< 25.54    Too small, by 22.04.
+    34     0.00 <<< 26.68    Too small, by 23.18.
+    36     0.00 <<< 27.78    Too small, by 24.28.
+    38     0.00 <<< 28.85    Too small, by 25.35.
+    40     0.00 <<< 29.88    Too small, by 26.38.
+    42     0.00 <<< 30.87    Too small, by 27.37.
+    44     0.00 <<< 31.84    Too small, by 28.34.
+    46     0.00 <<< 32.77    Too small, by 29.27.
+    48     0.00 <<< 33.67    Too small, by 30.17.
+    50     0.00 <<< 34.54    Too small, by 31.04.
+    52     0.00 <<< 35.38    Too small, by 31.88.
+    54     0.00 <<< 36.19    Too small, by 32.69.
+    56     0.00 <<< 36.98    Too small, by 33.48.
+    58     0.00 <<< 37.74    Too small, by 34.24.
+    60     0.00 <<< 37.48    Too small, by 33.98.
+    62     0.00 <<< 36.24    Too small, by 32.74.
+    64     0.00 <<< 35.04    Too small, by 31.54.
+    66     0.00 <<< 33.88    Too small, by 30.38.
+    68     0.00 <<< 32.76    Too small, by 29.26.
+    70     0.00 <<< 31.68    Too small, by 28.18.
+    72     0.00 <<< 30.63    Too small, by 27.13.
+    74     0.00 <<< 29.62    Too small, by 26.12.
+    76     0.00 <<< 28.64    Too small, by 25.14.
+    78     0.00 <<< 27.69    Too small, by 24.19.
+    80     0.00 <<< 26.78    Too small, by 23.28.
+    82     0.00 <<< 25.89    Too small, by 22.39.
+    84     0.00 <<< 25.04    Too small, by 21.54.
+    86     0.00 <<< 24.21    Too small, by 20.71.
+    88     0.00 <<< 23.41    Too small, by 19.91.
+    90     0.00 <<< 22.64    Too small, by 19.14.
+    92     0.00 <<< 21.89    Too small, by 18.39.
+    94     0.00 <<< 21.16    Too small, by 17.66.
+    96     0.00 <<< 20.46    Too small, by 16.96.
+    98     0.00 <<< 19.79    Too small, by 16.29.
+   100     0.00 <<< 19.13    Too small, by 15.63.
+   102     0.00 <<< 18.50    Too small, by 15.00.
+   104     0.00 <<< 17.89    Too small, by 14.39.
+   106     0.00 <<< 17.30    Too small, by 13.80.
+   108     0.00 <<< 16.73    Too small, by 13.23.
+   110     0.00 <<< 16.17    Too small, by 12.67.
+   112     0.00 <<< 15.64    Too small, by 12.14.
+   114     0.00 <<< 15.12    Too small, by 11.62.
+   116     0.00 <<< 14.62    Too small, by 11.12.
+   118     0.00 <<< 14.14    Too small, by 10.64.
+   120     0.00 <<< 13.67    Too small, by 10.17.
+   122     0.00 <<< 13.22    Too small, by 9.72.
+   124     0.00 <<< 12.78    Too small, by 9.28.
+   126     0.00 <<< 12.36    Too small, by 8.86.
+   128     0.00 <<< 11.95    Too small, by 8.45.
+   130     0.00 <<< 11.56    Too small, by 8.06.
+   132     0.00 <<< 11.17    Too small, by 7.67.
+   134     0.00 <<< 10.80    Too small, by 7.30.
+   136     0.00 <<< 10.45    Too small, by 6.95.
+   138     0.00 <<< 10.10    Too small, by 6.60.
+   140     0.00 <<< 9.77     Too small, by 6.27.
+   142     0.00 <<< 9.45     Too small, by 5.95.
+   144     0.00 <<< 9.13     Too small, by 5.63.
+   146     0.00 <<< 8.83     Too small, by 5.33.
+   148     0.00 <<< 8.54     Too small, by 5.04.
+   150     0.00 <<< 8.26     Too small, by 4.76.
+   152     0.00 <<< 7.98     Too small, by 4.48.
+   154     0.00 <<< 7.72     Too small, by 4.22.
+   156     0.00 <<< 7.47     Too small, by 3.97.
+   158     0.00 <<< 7.22     Too small, by 3.72.
+   160     0.00 <<< 6.98     Too small, by 3.48.
+   162     0.00 <<< 6.75     Too small, by 3.25.
+   164     0.00 <<< 6.53     Too small, by 3.03.
+   166     0.00 <<< 6.31     Too small, by 2.81.
+   168     0.00 <<< 6.10     Too small, by 2.60.
+   170     0.00 <<< 5.90     Too small, by 2.40.
+   172     0.00 <<< 5.70     Too small, by 2.20.
+   174     0.00 <<< 5.52     Too small, by 2.02.
+   176     0.00 <<< 5.33     Too small, by 1.83.
+   178     0.00 <<< 5.16     Too small, by 1.66.
+pintos -v -k -T 480 --bochs  -- -q -mlfqs run mlfqs-load-avg < /dev/null 2> tests/threads/mlfqs-load-avg.errors > tests/threads/mlfqs-load-avg.output
+perl -I../.. ../../tests/threads/mlfqs-load-avg.ck tests/threads/mlfqs-load-avg tests/threads/mlfqs-load-avg.result
+FAIL tests/threads/mlfqs-load-avg
+Some load average values were missing or differed from those expected by more than 2.5.
+  time   actual <-> expected explanation
+------ -------- --- -------- ----------------------------------------
+     2     0.00  =  0.05     
+     4     0.00  =  0.16     
+     6     0.00  =  0.34     
+     8     0.00  =  0.58     
+    10     0.00  =  0.87     
+    12     0.00  =  1.22     
+    14     0.00  =  1.63     
+    16     0.00  =  2.09     
+    18     0.00 <<< 2.60     Too small, by 0.10.
+    20     0.00 <<< 3.16     Too small, by 0.66.
+    22     0.00 <<< 3.76     Too small, by 1.26.
+    24     0.00 <<< 4.42     Too small, by 1.92.
+    26     0.00 <<< 5.11     Too small, by 2.61.
+    28     0.00 <<< 5.85     Too small, by 3.35.
+    30     0.00 <<< 6.63     Too small, by 4.13.
+    32     0.00 <<< 7.46     Too small, by 4.96.
+    34     0.00 <<< 8.32     Too small, by 5.82.
+    36     0.00 <<< 9.22     Too small, by 6.72.
+    38     0.00 <<< 10.15    Too small, by 7.65.
+    40     0.00 <<< 11.12    Too small, by 8.62.
+    42     0.00 <<< 12.13    Too small, by 9.63.
+    44     0.00 <<< 13.16    Too small, by 10.66.
+    46     0.00 <<< 14.23    Too small, by 11.73.
+    48     0.00 <<< 15.33    Too small, by 12.83.
+    50     0.00 <<< 16.46    Too small, by 13.96.
+    52     0.00 <<< 17.62    Too small, by 15.12.
+    54     0.00 <<< 18.81    Too small, by 16.31.
+    56     0.00 <<< 20.02    Too small, by 17.52.
+    58     0.00 <<< 21.26    Too small, by 18.76.
+    60     0.00 <<< 22.52    Too small, by 20.02.
+    62     0.00 <<< 23.71    Too small, by 21.21.
+    64     0.00 <<< 24.80    Too small, by 22.30.
+    66     0.00 <<< 25.78    Too small, by 23.28.
+    68     0.00 <<< 26.66    Too small, by 24.16.
+    70     0.00 <<< 27.45    Too small, by 24.95.
+    72     0.00 <<< 28.14    Too small, by 25.64.
+    74     0.00 <<< 28.75    Too small, by 26.25.
+    76     0.00 <<< 29.27    Too small, by 26.77.
+    78     0.00 <<< 29.71    Too small, by 27.21.
+    80     0.00 <<< 30.06    Too small, by 27.56.
+    82     0.00 <<< 30.34    Too small, by 27.84.
+    84     0.00 <<< 30.55    Too small, by 28.05.
+    86     0.00 <<< 30.68    Too small, by 28.18.
+    88     0.00 <<< 30.74    Too small, by 28.24.
+    90     0.00 <<< 30.73    Too small, by 28.23.
+    92     0.00 <<< 30.66    Too small, by 28.16.
+    94     0.00 <<< 30.52    Too small, by 28.02.
+    96     0.00 <<< 30.32    Too small, by 27.82.
+    98     0.00 <<< 30.06    Too small, by 27.56.
+   100     0.00 <<< 29.74    Too small, by 27.24.
+   102     0.00 <<< 29.37    Too small, by 26.87.
+   104     0.00 <<< 28.95    Too small, by 26.45.
+   106     0.00 <<< 28.47    Too small, by 25.97.
+   108     0.00 <<< 27.94    Too small, by 25.44.
+   110     0.00 <<< 27.36    Too small, by 24.86.
+   112     0.00 <<< 26.74    Too small, by 24.24.
+   114     0.00 <<< 26.07    Too small, by 23.57.
+   116     0.00 <<< 25.36    Too small, by 22.86.
+   118     0.00 <<< 24.60    Too small, by 22.10.
+   120     0.00 <<< 23.81    Too small, by 21.31.
+   122     0.00 <<< 23.02    Too small, by 20.52.
+   124     0.00 <<< 22.26    Too small, by 19.76.
+   126     0.00 <<< 21.52    Too small, by 19.02.
+   128     0.00 <<< 20.81    Too small, by 18.31.
+   130     0.00 <<< 20.12    Too small, by 17.62.
+   132     0.00 <<< 19.46    Too small, by 16.96.
+   134     0.00 <<< 18.81    Too small, by 16.31.
+   136     0.00 <<< 18.19    Too small, by 15.69.
+   138     0.00 <<< 17.59    Too small, by 15.09.
+   140     0.00 <<< 17.01    Too small, by 14.51.
+   142     0.00 <<< 16.45    Too small, by 13.95.
+   144     0.00 <<< 15.90    Too small, by 13.40.
+   146     0.00 <<< 15.38    Too small, by 12.88.
+   148     0.00 <<< 14.87    Too small, by 12.37.
+   150     0.00 <<< 14.38    Too small, by 11.88.
+   152     0.00 <<< 13.90    Too small, by 11.40.
+   154     0.00 <<< 13.44    Too small, by 10.94.
+   156     0.00 <<< 13.00    Too small, by 10.50.
+   158     0.00 <<< 12.57    Too small, by 10.07.
+   160     0.00 <<< 12.15    Too small, by 9.65.
+   162     0.00 <<< 11.75    Too small, by 9.25.
+   164     0.00 <<< 11.36    Too small, by 8.86.
+   166     0.00 <<< 10.99    Too small, by 8.49.
+   168     0.00 <<< 10.62    Too small, by 8.12.
+   170     0.00 <<< 10.27    Too small, by 7.77.
+   172     0.00 <<< 9.93     Too small, by 7.43.
+   174     0.00 <<< 9.61     Too small, by 7.11.
+   176     0.00 <<< 9.29     Too small, by 6.79.
+   178     0.00 <<< 8.98     Too small, by 6.48.
+pintos -v -k -T 480 --bochs  -- -q -mlfqs run mlfqs-recent-1 < /dev/null 2> tests/threads/mlfqs-recent-1.errors > tests/threads/mlfqs-recent-1.output
+perl -I../.. ../../tests/threads/mlfqs-recent-1.ck tests/threads/mlfqs-recent-1 tests/threads/mlfqs-recent-1.result
+FAIL tests/threads/mlfqs-recent-1
+Some recent_cpu values were missing or differed from those expected by more than 2.5.
+  time   actual <-> expected explanation
+------ -------- --- -------- ----------------------------------------
+     2     0.00 <<< 6.40     Too small, by 3.90.
+     4     0.00 <<< 12.60    Too small, by 10.10.
+     6     0.00 <<< 18.61    Too small, by 16.11.
+     8     0.00 <<< 24.44    Too small, by 21.94.
+    10     0.00 <<< 30.08    Too small, by 27.58.
+    12     0.00 <<< 35.54    Too small, by 33.04.
+    14     0.00 <<< 40.83    Too small, by 38.33.
+    16     0.00 <<< 45.96    Too small, by 43.46.
+    18     0.00 <<< 50.92    Too small, by 48.42.
+    20     0.00 <<< 55.73    Too small, by 53.23.
+    22     0.00 <<< 60.39    Too small, by 57.89.
+    24     0.00 <<< 64.90    Too small, by 62.40.
+    26     0.00 <<< 69.27    Too small, by 66.77.
+    28     0.00 <<< 73.50    Too small, by 71.00.
+    30     0.00 <<< 77.60    Too small, by 75.10.
+    32     0.00 <<< 81.56    Too small, by 79.06.
+    34     0.00 <<< 85.40    Too small, by 82.90.
+    36     0.00 <<< 89.12    Too small, by 86.62.
+    38     0.00 <<< 92.72    Too small, by 90.22.
+    40     0.00 <<< 96.20    Too small, by 93.70.
+    42     0.00 <<< 99.57    Too small, by 97.07.
+    44     0.00 <<< 102.84   Too small, by 100.34.
+    46     0.00 <<< 106.00   Too small, by 103.50.
+    48     0.00 <<< 109.06   Too small, by 106.56.
+    50     0.00 <<< 112.02   Too small, by 109.52.
+    52     0.00 <<< 114.89   Too small, by 112.39.
+    54     0.00 <<< 117.66   Too small, by 115.16.
+    56     0.00 <<< 120.34   Too small, by 117.84.
+    58     0.00 <<< 122.94   Too small, by 120.44.
+    60     0.00 <<< 125.46   Too small, by 122.96.
+    62     0.00 <<< 127.89   Too small, by 125.39.
+    64     0.00 <<< 130.25   Too small, by 127.75.
+    66     0.00 <<< 132.53   Too small, by 130.03.
+    68     0.00 <<< 134.73   Too small, by 132.23.
+    70     0.00 <<< 136.86   Too small, by 134.36.
+    72     0.00 <<< 138.93   Too small, by 136.43.
+    74     0.00 <<< 140.93   Too small, by 138.43.
+    76     0.00 <<< 142.86   Too small, by 140.36.
+    78     0.00 <<< 144.73   Too small, by 142.23.
+    80     0.00 <<< 146.54   Too small, by 144.04.
+    82     0.00 <<< 148.29   Too small, by 145.79.
+    84     0.00 <<< 149.99   Too small, by 147.49.
+    86     0.00 <<< 151.63   Too small, by 149.13.
+    88     0.00 <<< 153.21   Too small, by 150.71.
+    90     0.00 <<< 154.75   Too small, by 152.25.
+    92     0.00 <<< 156.23   Too small, by 153.73.
+    94     0.00 <<< 157.67   Too small, by 155.17.
+    96     0.00 <<< 159.06   Too small, by 156.56.
+    98     0.00 <<< 160.40   Too small, by 157.90.
+   100     0.00 <<< 161.70   Too small, by 159.20.
+   102     0.00 <<< 162.96   Too small, by 160.46.
+   104     0.00 <<< 164.18   Too small, by 161.68.
+   106     0.00 <<< 165.35   Too small, by 162.85.
+   108     0.00 <<< 166.49   Too small, by 163.99.
+   110     0.00 <<< 167.59   Too small, by 165.09.
+   112     0.00 <<< 168.66   Too small, by 166.16.
+   114     0.00 <<< 169.69   Too small, by 167.19.
+   116     0.00 <<< 170.69   Too small, by 168.19.
+   118     0.00 <<< 171.65   Too small, by 169.15.
+   120     0.00 <<< 172.58   Too small, by 170.08.
+   122     0.00 <<< 173.49   Too small, by 170.99.
+   124     0.00 <<< 174.36   Too small, by 171.86.
+   126     0.00 <<< 175.20   Too small, by 172.70.
+   128     0.00 <<< 176.02   Too small, by 173.52.
+   130     0.00 <<< 176.81   Too small, by 174.31.
+   132     0.00 <<< 177.57   Too small, by 175.07.
+   134     0.00 <<< 178.31   Too small, by 175.81.
+   136     0.00 <<< 179.02   Too small, by 176.52.
+   138     0.00 <<< 179.72   Too small, by 177.22.
+   140     0.00 <<< 180.38   Too small, by 177.88.
+   142     0.00 <<< 181.03   Too small, by 178.53.
+   144     0.00 <<< 181.65   Too small, by 179.15.
+   146     0.00 <<< 182.26   Too small, by 179.76.
+   148     0.00 <<< 182.84   Too small, by 180.34.
+   150     0.00 <<< 183.41   Too small, by 180.91.
+   152     0.00 <<< 183.96   Too small, by 181.46.
+   154     0.00 <<< 184.49   Too small, by 181.99.
+   156     0.00 <<< 185.00   Too small, by 182.50.
+   158     0.00 <<< 185.49   Too small, by 182.99.
+   160     0.00 <<< 185.97   Too small, by 183.47.
+   162     0.00 <<< 186.43   Too small, by 183.93.
+   164     0.00 <<< 186.88   Too small, by 184.38.
+   166     0.00 <<< 187.31   Too small, by 184.81.
+   168     0.00 <<< 187.73   Too small, by 185.23.
+   170     0.00 <<< 188.14   Too small, by 185.64.
+   172     0.00 <<< 188.53   Too small, by 186.03.
+   174     0.00 <<< 188.91   Too small, by 186.41.
+   176     0.00 <<< 189.27   Too small, by 186.77.
+   178     0.00 <<< 189.63   Too small, by 187.13.
+pintos -v -k -T 480 --bochs  -- -q -mlfqs run mlfqs-fair-2 < /dev/null 2> tests/threads/mlfqs-fair-2.errors > tests/threads/mlfqs-fair-2.output
+perl -I../.. ../../tests/threads/mlfqs-fair-2.ck tests/threads/mlfqs-fair-2 tests/threads/mlfqs-fair-2.result
+pass tests/threads/mlfqs-fair-2
+pintos -v -k -T 480 --bochs  -- -q -mlfqs run mlfqs-fair-20 < /dev/null 2> tests/threads/mlfqs-fair-20.errors > tests/threads/mlfqs-fair-20.output
+perl -I../.. ../../tests/threads/mlfqs-fair-20.ck tests/threads/mlfqs-fair-20 tests/threads/mlfqs-fair-20.result
+pass tests/threads/mlfqs-fair-20
+pintos -v -k -T 480 --bochs  -- -q -mlfqs run mlfqs-nice-2 < /dev/null 2> tests/threads/mlfqs-nice-2.errors > tests/threads/mlfqs-nice-2.output
+perl -I../.. ../../tests/threads/mlfqs-nice-2.ck tests/threads/mlfqs-nice-2 tests/threads/mlfqs-nice-2.result
+FAIL tests/threads/mlfqs-nice-2
+Some tick counts were missing or differed from those expected by more than 50.
+thread   actual <-> expected explanation
+------ -------- --- -------- ----------------------------------------
+     0     1501 <<< 1904     Too small, by 353.
+     1     1501 >>> 1096     Too big, by 355.
+pintos -v -k -T 480 --bochs  -- -q -mlfqs run mlfqs-nice-10 < /dev/null 2> tests/threads/mlfqs-nice-10.errors > tests/threads/mlfqs-nice-10.output
+perl -I../.. ../../tests/threads/mlfqs-nice-10.ck tests/threads/mlfqs-nice-10 tests/threads/mlfqs-nice-10.result
+FAIL tests/threads/mlfqs-nice-10
+Some tick counts were missing or differed from those expected by more than 25.
+thread   actual <-> expected explanation
+------ -------- --- -------- ----------------------------------------
+     0      301 <<< 672      Too small, by 346.
+     1      300 <<< 588      Too small, by 263.
+     2      300 <<< 492      Too small, by 167.
+     3      300 <<< 408      Too small, by 83.
+     4      300  =  316      
+     5      300 >>> 232      Too big, by 43.
+     6      301 >>> 152      Too big, by 124.
+     7      300 >>> 92       Too big, by 183.
+     8      301 >>> 40       Too big, by 236.
+     9      301 >>> 8        Too big, by 268.
+pintos -v -k -T 480 --bochs  -- -q -mlfqs run mlfqs-block < /dev/null 2> tests/threads/mlfqs-block.errors > tests/threads/mlfqs-block.output
+perl -I../.. ../../tests/threads/mlfqs-block.ck tests/threads/mlfqs-block tests/threads/mlfqs-block.result
+FAIL tests/threads/mlfqs-block
+Test output failed to match any acceptable form.
+
+Acceptable output:
+  (mlfqs-block) begin
+  (mlfqs-block) Main thread acquiring lock.
+  (mlfqs-block) Main thread creating block thread, sleeping 25 seconds...
+  (mlfqs-block) Block thread spinning for 20 seconds...
+  (mlfqs-block) Block thread acquiring lock...
+  (mlfqs-block) Main thread spinning for 5 seconds...
+  (mlfqs-block) Main thread releasing lock.
+  (mlfqs-block) ...got it.
+  (mlfqs-block) Block thread should have already acquired lock.
+  (mlfqs-block) end
+Differences in `diff -u' format:
+  (mlfqs-block) begin
+  (mlfqs-block) Main thread acquiring lock.
+  (mlfqs-block) Main thread creating block thread, sleeping 25 seconds...
+  (mlfqs-block) Block thread spinning for 20 seconds...
+  (mlfqs-block) Block thread acquiring lock...
+  (mlfqs-block) Main thread spinning for 5 seconds...
+  (mlfqs-block) Main thread releasing lock.
+- (mlfqs-block) ...got it.
+  (mlfqs-block) Block thread should have already acquired lock.
+  (mlfqs-block) end
+pass tests/threads/alarm-single
+pass tests/threads/alarm-multiple
+pass tests/threads/alarm-simultaneous
+pass tests/threads/alarm-priority
+pass tests/threads/alarm-zero
+pass tests/threads/alarm-negative
+pass tests/threads/priority-change
+FAIL tests/threads/priority-donate-one
+FAIL tests/threads/priority-donate-multiple
+FAIL tests/threads/priority-donate-multiple2
+FAIL tests/threads/priority-donate-nest
+FAIL tests/threads/priority-donate-sema
+FAIL tests/threads/priority-donate-lower
+FAIL tests/threads/priority-fifo
+pass tests/threads/priority-preempt
+FAIL tests/threads/priority-sema
+FAIL tests/threads/priority-condvar
+FAIL tests/threads/priority-donate-chain
+FAIL tests/threads/mlfqs-load-1
+FAIL tests/threads/mlfqs-load-60
+FAIL tests/threads/mlfqs-load-avg
+FAIL tests/threads/mlfqs-recent-1
+pass tests/threads/mlfqs-fair-2
+pass tests/threads/mlfqs-fair-20
+FAIL tests/threads/mlfqs-nice-2
+FAIL tests/threads/mlfqs-nice-10
+FAIL tests/threads/mlfqs-block
+17 of 27 tests failed.
+make: *** [../../tests/Make.tests:27: check] Error 1
+make: *** [../../tests/Make.tests:27: check] Error 1
+
+sum of alarm tests is: 18 (18)     emphasis: 33.3%
+sum of priority tests is: 6 (38)  emphasis: 66.7%
+Total grade out of 100: 43.8533
+Total grade out of 90: 39.4680
+

@@ -1,0 +1,33 @@
+warning: can't find squish-pty, so terminal input will fail
+bochs -q
+PiLo hda1
+Loading...............
+Kernel command line: -q run priority-donate-lower
+Pintos booting with 4,096 kB RAM...
+383 pages available in kernel pool.
+383 pages available in user pool.
+Calibrating timer...  102,400 loops/s.
+Initializing EHCI
+Initializing UHCI
+Boot complete.
+Executing 'priority-donate-lower':
+(priority-donate-lower) begin
+(priority-donate-lower) Main thread should have priority 41.  Actual priority: 31.
+(priority-donate-lower) Lowering base priority...
+(priority-donate-lower) Main thread should have priority 41.  Actual priority: 21.
+(priority-donate-lower) acquire must already have finished.
+(priority-donate-lower) Main thread should have priority 21.  Actual priority: 21.
+Unexpected interrupt 0x0e (#PF Page-Fault Exception)
+Unexpected interrupt 0x0e (#PF Page-Fault Exception)
+Unexpected interrupt 0x0e (#PF Page-Fault Exception)
+(priority-donate-lower) acquire: got the lock
+Kernel PANIC at ../../threads/synch.c:284 in lock_release(): assertion `lock_held_by_current_thread (lock)' failed.
+Call stack: 0xc002eee1 0xc0022ea6 0xc0032713 0xc0020fcb.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 138 ticks
+Thread: 0 idle ticks, 138 kernel ticks, 0 user ticks
+Console: 3221492582 characters output
+Keyboard: 0 keys pressed
+Powering off..

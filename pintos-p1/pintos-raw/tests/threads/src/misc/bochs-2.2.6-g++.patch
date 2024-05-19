@@ -1,0 +1,12 @@
+--- bochs/bochs-2.2.6/bx_debug/symbols.cc	2006-01-15 11:57:48.000000000 -0600
++++ bochs-2.2.6/bx_debug/symbols.cc	2010-12-09 10:37:06.000000000 -0600
+@@ -92,6 +92,9 @@ char* bx_dbg_disasm_symbolic_address(Bit
+ #endif
+ 
+ using namespace std;
++#ifdef __GNUC__
++using namespace __gnu_cxx;
++#endif
+ 
+ struct symbol_entry_t
+ {

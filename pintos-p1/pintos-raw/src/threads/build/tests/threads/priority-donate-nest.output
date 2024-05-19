@@ -1,0 +1,26 @@
+warning: can't find squish-pty, so terminal input will fail
+bochs -q
+PiLo hda1
+Loading...............
+Kernel command line: -q run priority-donate-nest
+Pintos booting with 4,096 kB RAM...
+383 pages available in kernel pool.
+383 pages available in user pool.
+Calibrating timer...  102,400 loops/s.
+Initializing EHCI
+Initializing UHCI
+Boot complete.
+Executing 'priority-donate-nest':
+(priority-donate-nest) begin
+(priority-donate-nest) Medium thread should have priority 33.  Actual priority: 32.
+(priority-donate-nest) Medium thread got the lock.
+Kernel PANIC at ../../lib/kernel/list.c:251 in list_remove(): assertion `is_interior (elem)' failed.
+Call stack: 0xc002eee1 0xc002f529 0xc002f56e 0xc0022b9a 0xc0022ee2 0xc0032355 0xc0020fcb.
+The `backtrace' program can make call stacks useful.
+Read "Backtraces" in the "Debugging Tools" chapter
+of the Pintos documentation for more information.
+Timer: 82 ticks
+Thread: 0 idle ticks, 82 kernel ticks, 0 user ticks
+Console: 3221492167 characters output
+Keyboard: 0 keys pressed
+Powering off..

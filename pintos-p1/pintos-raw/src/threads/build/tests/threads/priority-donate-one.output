@@ -1,0 +1,27 @@
+warning: can't find squish-pty, so terminal input will fail
+bochs -q
+PiLo hda1
+Loading...............
+Kernel command line: -q run priority-donate-one
+Pintos booting with 4,096 kB RAM...
+383 pages available in kernel pool.
+383 pages available in user pool.
+Calibrating timer...  102,400 loops/s.
+Initializing EHCI
+Initializing UHCI
+Boot complete.
+Executing 'priority-donate-one':
+(priority-donate-one) begin
+got into acquire1_thread_func.
+(priority-donate-one) This thread should have priority 32.  Actual priority: 31.
+got into acquire2_thread_func.
+(priority-donate-one) This thread should have priority 33.  Actual priority: 31.
+(priority-donate-one) acquire2, acquire1 must already have finished, in that order.
+(priority-donate-one) This should be the last line before finishing this test.
+(priority-donate-one) end
+Execution of 'priority-donate-one' complete.
+Timer: 145 ticks
+Thread: 0 idle ticks, 149 kernel ticks, 0 user ticks
+Console: 3221492145 characters output
+Keyboard: 0 keys pressed
+Powering off...
