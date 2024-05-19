@@ -1,6 +1,6 @@
-# Team Contribution
-- Jihui("Todd") Tan ~ 49%
-- Haoran("Mike") Wu ~ 51%
+# Team
+- Jihui("Todd") Tan
+- Haoran("Mike") Wu
 
 **All Test Passed**
 
